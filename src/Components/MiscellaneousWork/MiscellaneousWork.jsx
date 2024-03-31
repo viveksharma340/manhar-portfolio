@@ -1,4 +1,4 @@
-import { Col, Typography } from "antd";
+import { Button, Col, Typography } from "antd";
 import React from "react";
 import nftOne from "../../Assets/images/Nft 1.jpg";
 import nftTwo from "../../Assets/images/Nft 2.jpg";
@@ -31,9 +31,35 @@ import right4 from "../../Assets/images/right4.jpg";
 import shoot1 from "../../Assets/images/shoot1.jpg";
 import shoot2 from "../../Assets/images/shoot2.jpg";
 
+import arrowTop from "../../Assets/icons/arrowWhite.svg";
+
+
+import work1 from "../../Assets/images/work1.jpg";
+import work2 from "../../Assets/images/work2.jpg";
+import work3 from "../../Assets/images/work3.jpg";
+import work4 from "../../Assets/images/work4.jpg";
+import work5 from "../../Assets/images/work5.jpg";
+import work6 from "../../Assets/images/work6.jpg";
+import work7 from "../../Assets/images/work7.jpg";
+
+
+import card1 from "../../Assets/images/card001.svg";
+import card2 from "../../Assets/images/card002.svg";
+import card3 from "../../Assets/images/card003.svg";
+
+
+
+
+
+
+
+
+
 import gif from "../../Assets/images/gif2.gif";
+import { useNavigate } from "react-router-dom";
 
 const MiscellaneousWork = () => {
+  const navigate=useNavigate()
   const { Text } = Typography;
   const skArr = [
     { key: 1, image: sk1 },
@@ -41,6 +67,25 @@ const MiscellaneousWork = () => {
     { key: 3, image: sk3 },
     { key: 4, image: sk4 },
   ];
+  const workArr = [
+    { key: 1, image: work1,height:"40vh",width:"32%" },
+    { key: 2, image: work2 ,height:"40vh",width:"32%"},
+    { key: 3, image: work3,height:"40vh",width:"32%" },
+    { key: 4, image: work4 ,height:"40vh",width:"32%"},
+    { key: 5, image: work5 ,height:"40vh",width:"42%"},
+    { key: 6, image: work6,height:"40vh",width:"22%" },
+    { key: 7, image: work7 ,height:"60vh",width:"97.5%"},
+  ];
+
+ 
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const shoot = [
     { key: 1, image: shoot1, height: "75vh", width: "40%" },
     {
@@ -52,6 +97,20 @@ const MiscellaneousWork = () => {
     },
     { key: 3, image: shoot2, height: "75vh", width: "40%" },
   ];
+
+
+  const cards = [
+    { key: 1, image: card2, url: "" },
+    { key: 2, image: "", url: "/home" },
+    { key: 3, image: card1, url: "/productWork" },
+
+  ];
+
+  const handleImageClick = (url) => {
+    navigate(url);
+  };
+
+
 
   const drArr = [
     { key: 1, image: dr1 },
@@ -336,7 +395,95 @@ const MiscellaneousWork = () => {
             </Col>
           ))}
         </Col>
+        <Text style={{ color: "#FFFFFF", fontSize: "28px", fontWeight: 500 }}>
+          More work{" "}
+        </Text>
+
+
+        <Col style={{ display: "flex", gap: "0.5rem" ,flexWrap:'wrap',justifyContent:"center"}}>
+            {workArr.map((cardObj) => (
+              <img
+                key={cardObj.key}
+                loading="lazy"
+                src={cardObj.image}
+                alt="cube"
+                style={{
+                  width: cardObj.width,
+                  height: cardObj.height,
+                }}
+              />
+            ))}
+          </Col>
+          <Col style={{display:"flex",flexDirection:"column",justifyContent:'center',alignItems:'center',gap:"1rem"}}>
+          
+                <Text style={{ color: "#FFFFFF", fontSize: "28px", fontWeight: 500 }}>
+                Latest                </Text>
+                <Text style={{ color: "#FFFFFF", fontSize: "28px", fontWeight: 500 }}>
+                learning about 3D and more lately... 
+                </Text>
+          
+          </Col>
+
+          </Col>
+
+          <Col
+        style={{
+          display: "flex",
+          gap: "1rem",
+          justifyContent: "center",
+          padding: "2rem",
+          backgroundColor: "#000000",
+        }}
+      >
+        {cards.map((cardObj, idx) =>
+          cardObj.image ? (
+            <img
+              key={cardObj.key}
+              loading="lazy"
+              src={cardObj.image}
+              alt="cube"
+              style={{ color: "#FFFFF", width: "30%", cursor: "pointer" }}
+              onClick={() => handleImageClick(cardObj.url)}
+            />
+          ) : (
+            <Col
+              style={{
+                width: "30%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection:'column',
+                gap:'2rem'
+
+              }}
+            >
+ <img
+                loading="lazy"
+                src={arrowTop}
+                alt="card"
+                onClick={scrollToTop}
+                style={{ cursor: "pointer" }}
+              />
+
+              <Button
+                onClick={() => navigate("/")}
+                type="primary"
+                style={{
+                  backgroundColor: "#000000",
+                  border: "1px solid #FFFFFF",
+                  height: "42px",
+                }}
+              >
+                <Text style={{ color: "#FFFFFF", fontWeight: 500 }}>
+                  {" "}
+                  Go back to home page
+                </Text>
+              </Button>{" "}
+            </Col>
+          )
+        )}
       </Col>
+     
     </Col>
   );
 };
