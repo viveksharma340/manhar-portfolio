@@ -18,9 +18,9 @@ const About = () => {
   const images = [manhar1, manhar2, manhar3, manhar4];
 
   const card = [
-    { image: card1, url: "/productWork" },
-    { image: card2, url: "" },
-    { image: card3, url: "/miscellaneousWork" },
+    { image: card1, url: "/product-work" },
+    { image: card2, url: "/graphic-work" },
+    { image: card3, url: "/miscellaneous-work" },
   ];
 
   const scrollToTop = () => {

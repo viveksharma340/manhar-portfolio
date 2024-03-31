@@ -7,6 +7,7 @@ import Navbar from './Components/Navvbar/Navbar';
 import './App.css';
 import Product from './Components/ProductWork/Product';
 import MiscellaneousWork from './Components/MiscellaneousWork/MiscellaneousWork';
+import Livewise from './Components/livewise/Livewise';
 const { Content } = Layout;
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/productWork" element={<Product />} />
-              <Route path="/miscellaneousWork" element={<MiscellaneousWork />} />
+              <Route path="/product-work" element={<Product />} />
+              <Route path="/miscellaneous-work" element={<MiscellaneousWork />} />
+              <Route path="/graphic-work" element={<Livewise />} />
             </Routes>
         </Content>
     </Router>

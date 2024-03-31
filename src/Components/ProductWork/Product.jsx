@@ -76,9 +76,9 @@ const Product = () => {
   ];
 
   const cards = [
-    { key: 1, image: card1, url: "/productWork" },
+    { key: 1, image: card1, url: "/graphic-work" },
     { key: 2, image: "", url: "/home" },
-    { key: 3, image: card3, url: "/miscellaneousWork" },
+    { key: 3, image: card3, url: "/miscellaneous-work" },
   ];
 
   const scrollToTop = () => {
