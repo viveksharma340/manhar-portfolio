@@ -175,7 +175,12 @@ const Home = () => {
             loading="lazy"
             src={cube2Image}
             alt="cube"
-            style={{ width: "80%", position: "absolute", bottom: "-9rem", animation: "moveUpDown 4s infinite alternate"}}
+            style={{
+              width: "80%",
+              position: "absolute",
+              bottom: "-9rem",
+              animation: "moveUpDown 4s infinite alternate",
+            }}
           />
         </Col>
         <img
@@ -188,7 +193,10 @@ const Home = () => {
           loading="lazy"
           src={cube3Image}
           alt="cube"
-          style={{ width: "30%" , animation: "moveUpDown 4s infinite alternate" }}
+          style={{
+            width: "30%",
+            animation: "moveUpDown 4s infinite alternate",
+          }}
         />
       </Col>
       <Col style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
@@ -291,81 +299,86 @@ const Home = () => {
           ))}
         </Row>
       </Col>
-      <Col style={{display:"flex"}}>
-  
-  <Col style={{width:"30%",display:"flex",alignItems:"flex-end"}}>
-  <img
+      <Col style={{ display: "flex" }}>
+        <Col style={{ width: "30%", display: "flex", alignItems: "flex-end" }}>
+          <img
             loading="lazy"
             src={cube5Image}
             alt="cube"
-            style={{width:"70%", animation: "moveUpDown 4s infinite alternate"}}
-            />
-            </Col>
-              <Col
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          width:"60%"
-          // margin: "5rem 0",
-          // position:"relative"
-        }}
-      >
-        <Text
-          style={{
-            color: "#ffff",
-            textAlign: "center",
-            fontWeight: 500,
-            fontSize: "62px",
-          }}
-        >
-          YOU CAN{" "}
-        </Text>
-
-        <Text
-          style={{
-            color: "#ffff",
-            textAlign: "center",
-            fontWeight: 500,
-            fontSize: "62px",
-          }}
-        >
-          {" "}
-          DO ANYTHING,
-        </Text>
-        <Text
-          style={{
-            color: "#ffff",
-            textAlign: "center",
-            fontWeight: 500,
-            fontSize: "62px",
-          }}
-        >
-          {" "}
-          BUT NOT
-        </Text>
-        <Text
-          style={{
-            color: "#ffff",
-            textAlign: "center",
-            fontWeight: 500,
-            fontSize: "62px",
-          }}
-        >
-          {" "}
-          EVERYTHING.
-        </Text>
+            style={{
+              width: "70%",
+              animation: "moveUpDown 4s infinite alternate",
+            }}
+          />
         </Col>
-        <Col style={{width:"30%",display:"flex",alignItems:"flex-start"}}>
+        <Col
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            width: "60%",
+            // margin: "5rem 0",
+            // position:"relative"
+          }}
+        >
+          <Text
+            style={{
+              color: "#ffff",
+              textAlign: "center",
+              fontWeight: 500,
+              fontSize: "62px",
+            }}
+          >
+            YOU CAN{" "}
+          </Text>
 
-        <img
+          <Text
+            style={{
+              color: "#ffff",
+              textAlign: "center",
+              fontWeight: 500,
+              fontSize: "62px",
+            }}
+          >
+            {" "}
+            DO ANYTHING,
+          </Text>
+          <Text
+            style={{
+              color: "#ffff",
+              textAlign: "center",
+              fontWeight: 500,
+              fontSize: "62px",
+            }}
+          >
+            {" "}
+            BUT NOT
+          </Text>
+          <Text
+            style={{
+              color: "#ffff",
+              textAlign: "center",
+              fontWeight: 500,
+              fontSize: "62px",
+            }}
+          >
+            {" "}
+            EVERYTHING.
+          </Text>
+        </Col>
+        <Col
+          style={{ width: "30%", display: "flex", alignItems: "flex-start" }}
+        >
+          <img
             loading="lazy"
             src={cube4Image}
             alt="cube"
-            style={{width:"90%" ,animation: "moveUpDown 4s infinite alternate"}}
+            style={{
+              width: "90%",
+              animation: "moveUpDown 4s infinite alternate",
+            }}
           />
-          </Col>
-      
+        </Col>
       </Col>
 
       <Col
@@ -378,36 +391,35 @@ const Home = () => {
       >
         <Col style={{ width: "5%", display: "flex", alignItems: "flex-end" }}>
           {" "}
-          <img loading="lazy" src={arrowTop} alt="card" onClick={scrollToTop} style={{cursor:"pointer"}} />
+          <img
+            loading="lazy"
+            src={arrowTop}
+            alt="card"
+            onClick={scrollToTop}
+            style={{ cursor: "pointer" }}
+          />
         </Col>
-        <Col style={{ width: "70%" ,display:"flex",flexDirection:"column", gap:2}}>
+        <Col
+          style={{
+            width: "70%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+          }}
+        >
           <Text style={{ fontSize: "32px", fontWeight: 500 }}>
             Lets work together
           </Text>
-          <Text style={{ fontSize: "16px", fontWeight: 400 ,width:"60%"}}>
+          <Text style={{ fontSize: "16px", fontWeight: 400, width: "60%" }}>
             {
               " Thanks for visiting! If you have a project in mind or just want tosay hello, I'd love to hear from you ;)"
             }
           </Text>
-          <Col style={{display:"flex",gap:"1rem",paddingTop:"1rem"}}>
-          <img
-              loading="lazy"
-              src={linkedIn}
-              alt="card"
-            />
-               <img
-              loading="lazy"
-              src={insta}
-              alt="card"
-            />
-          
-          <img
-              loading="lazy"
-              src={bE}
-              alt="card"
-            />
-          
-          
+          <Col style={{ display: "flex", gap: "1rem", paddingTop: "1rem" }}>
+            <img loading="lazy" src={linkedIn} alt="card" />
+            <img loading="lazy" src={insta} alt="card" />
+
+            <img loading="lazy" src={bE} alt="card" />
           </Col>
         </Col>
 

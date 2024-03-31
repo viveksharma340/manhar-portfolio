@@ -14,14 +14,14 @@ import { useNavigate } from "react-router-dom";
 
 const { Text } = Typography;
 const About = () => {
-  const navigate=useNavigate()
-  const images = [manhar1, manhar2, manhar3,manhar4];
+  const navigate = useNavigate();
+  const images = [manhar1, manhar2, manhar3, manhar4];
 
   const card = [
-    { image: card1, url: '/productWork' },
-    { image: card2, url: '/productWork' },
-    { image: card3, url: '/url3' }
-];
+    { image: card1, url: "/productWork" },
+    { image: card2, url: "" },
+    { image: card3, url: "/miscellaneousWork" },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -30,7 +30,8 @@ const About = () => {
     });
   };
   const handleImageClick = (url) => {
-navigate(url)};
+    navigate(url);
+  };
   return (
     <>
       <Col
@@ -262,17 +263,15 @@ navigate(url)};
           }}
         >
           <Button
-          onClick={()=>navigate("/")}
+            onClick={() => navigate("/")}
             type="primary"
             style={{
               backgroundColor: "#000000",
               border: "1px solid #FFFFFF",
-              height:"42px"
+              height: "42px",
             }}
           >
-            <Text
-              style={{ color: "#FFFFFF", fontWeight: 500,  }}
-            >
+            <Text style={{ color: "#FFFFFF", fontWeight: 500 }}>
               {" "}
               Go back to home page
             </Text>
@@ -284,21 +283,28 @@ navigate(url)};
             gap: "1rem",
             justifyContent: "center",
             margin: "2rem",
-            backgroundColor:'#00000'
+            backgroundColor: "#00000",
           }}
         >
           {card.map((cardObj, idx) => (
-                <img
-                    key={idx}
-                    loading="lazy"
-                    src={cardObj.image}
-                    alt="cube"
-                    style={{ color: "#FFFFF", width: "30%" ,cursor:"pointer",backgroundColor:'#00000'}}
-                    onClick={() => handleImageClick(cardObj.url)}
-                />
-            ))}
+            <img
+              key={idx}
+              loading="lazy"
+              src={cardObj.image}
+              alt="cube"
+              style={{
+                color: "#FFFFF",
+                width: "30%",
+                cursor: "pointer",
+                backgroundColor: "#00000",
+              }}
+              onClick={() => handleImageClick(cardObj.url)}
+            />
+          ))}
         </Col>
-        <Col style={{ display: "flex", alignItems: "flex-end",margin:"2rem" }}>
+        <Col
+          style={{ display: "flex", alignItems: "flex-end", margin: "2rem" }}
+        >
           {" "}
           <img
             loading="lazy"
