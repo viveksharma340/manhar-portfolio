@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import Navbar from './Components/Navvbar/Navbar';
 import './App.css';
 import Product from './Components/ProductWork/Product';
+import MiscellaneousWork from './Components/MiscellaneousWork/MiscellaneousWork';
 const { Content } = Layout;
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/productWork" element={<Product />} />
+              <Route path="/miscellaneousWork" element={<MiscellaneousWork />} />
             </Routes>
         </Content>
     </Router>
