@@ -1,9 +1,10 @@
 import { Button, Carousel, Col, Image, Typography } from "antd";
 import React from "react";
 import cube5Image from "../../Assets/icons/Cube08.svg";
-import manhar1 from "../../Assets/images/manhar1.svg";
-import manhar2 from "../../Assets/images/manhar2.svg";
-import manhar3 from "../../Assets/images/manhar3.svg";
+import manhar1 from "../../Assets/images/manhar1.jpg";
+import manhar2 from "../../Assets/images/manhar2.jpg";
+import manhar3 from "../../Assets/images/manhar3.jpg";
+import manhar4 from "../../Assets/images/manhar4.jpg";
 import card1 from "../../Assets/images/card001.svg";
 import card2 from "../../Assets/images/card002.svg";
 import card3 from "../../Assets/images/card003.svg";
@@ -14,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 const { Text } = Typography;
 const About = () => {
   const navigate=useNavigate()
-  const images = [manhar1, manhar2, manhar3];
+  const images = [manhar1, manhar2, manhar3,manhar4];
 
   const card = [
     { image: card1, url: '/productWork' },
@@ -283,6 +284,7 @@ navigate(url)};
             gap: "1rem",
             justifyContent: "center",
             margin: "2rem",
+            backgroundColor:'#00000'
           }}
         >
           {card.map((cardObj, idx) => (
@@ -291,7 +293,7 @@ navigate(url)};
                     loading="lazy"
                     src={cardObj.image}
                     alt="cube"
-                    style={{ color: "#FFFFF", width: "30%" ,cursor:"pointer"}}
+                    style={{ color: "#FFFFF", width: "30%" ,cursor:"pointer",backgroundColor:'#00000'}}
                     onClick={() => handleImageClick(cardObj.url)}
                 />
             ))}

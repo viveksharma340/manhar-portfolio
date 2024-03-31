@@ -1,13 +1,13 @@
 import { Col, Typography, Image, Carousel, Row, Button } from "antd"; // Import Image component from Ant Design
 import React from "react";
-import imgOne from "../../Assets/images/Cmsbig 1.svg";
-import imgTwo from "../../Assets/images/oldcms02 1.svg";
-import imgThree from "../../Assets/images/Screenshot 2024-01-14 190810 1.svg";
+import imgOne from "../../Assets/images/Cmsbig 1.jpg";
+import imgTwo from "../../Assets/images/oldcms02 1.jpg";
+import imgThree from "../../Assets/images/Screenshot 2024-01-14 190810 1.jpg";
 import imgFour from "../../Assets/images/Screenshot 2024-01-14 190956 1.svg";
 import imgFive from "../../Assets/images/01 lofi 1.svg";
 import imgSix from "../../Assets/images/02 lofi 1.svg";
 import imgSeven from "../../Assets/images/03 lofi 1.svg";
-import imgEight from "../../Assets/images/cms2 1.svg";
+import imgEight from "../../Assets/images/cms2 1.jpg";
 
 import cardOne from "../../Assets/images/cardOne.svg";
 import cardTwo from "../../Assets/images/cardTwo.svg";
@@ -18,16 +18,16 @@ import cardSix from "../../Assets/images/cardSix.svg";
 import cardSeven from "../../Assets/images/cardSeven.svg";
 import cardEight from "../../Assets/images/cardEight.svg";
 
-import drawerOne from "../../Assets/images/drawerOne.svg";
-import drawerTwo from "../../Assets/images/drawerTwo.svg";
-import drawerThree from "../../Assets/images/drawerThree.svg";
-import drawerFour from "../../Assets/images/drawerFour.svg";
+import drawerOne from "../../Assets/images/drawerOne.jpg";
+import drawerTwo from "../../Assets/images/drawerTwo.jpg";
+import drawerThree from "../../Assets/images/drawerThree.jpg";
+import drawerFour from "../../Assets/images/drawerFour.jpg";
 import drawerFive from "../../Assets/images/drawerFive.svg";
-import drawerSix from "../../Assets/images/drawerSix.svg";
-import drawerSeven from "../../Assets/images/drawerSeven.svg";
+import drawerSix from "../../Assets/images/drawerSix.jpg";
+import drawerSeven from "../../Assets/images/drawerSeven.jpg";
 
-import compOne from "../../Assets/images/compTwo.svg";
-import compTwo from "../../Assets/images/compOne.svg";
+import compOne from "../../Assets/images/compTwo.jpg";
+import compTwo from "../../Assets/images/compOne.jpg";
 import arrowTop from "../../Assets/icons/arrowWhite.svg";
 
 import tableOne from "../../Assets/images/tableOne.jpg";
@@ -37,9 +37,8 @@ import tableFour from "../../Assets/images/tableFour.jpg";
 import tableFive from "../../Assets/images/tableFive.jpg";
 import tableSix from "../../Assets/images/tableSix.jpg";
 import card1 from "../../Assets/images/card001.svg";
-import card2 from "../../Assets/images/card002.svg";
 import card3 from "../../Assets/images/card003.svg";
-import logo from "../../Assets/icons/Logo1 High Quality 1.svg";
+import logo from "../../Assets/icons/Logo1 High Quality 1.jpg";
 import { useNavigate } from "react-router-dom";
 const { Text } = Typography;
 
@@ -145,8 +144,8 @@ const Product = () => {
           </Col>
         </Col>
 
-        <Col style={{ display: "flex", gap: "1rem" }}>
-          <Col style={{ width: "60%" }}>
+        <Col style={{ display: "flex", gap: "30px" }}>
+          <Col style={{ }}>
             <Image src={imgTwo} alt="Background Image" preview={false} />{" "}
             {/* Use Ant Design Image component */}
           </Col>
@@ -154,15 +153,14 @@ const Product = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "40%",
-              gap: "1rem",
+              gap: "30px",
             }}
           >
-            <Col style={{ width: "100%" }}>
-              <Image src={imgThree} alt="Image Three" preview={false} />{" "}
+            <Col style={{ }}>
+              <Image src={imgThree} alt="Image Three" preview={false}  />{" "}
               {/* Use Ant Design Image component */}
             </Col>
-            <Col style={{ width: "100%" }}>
+            <Col style={{  }}>
               <Image src={imgFour} alt="Image Four" preview={false} />{" "}
               {/* Use Ant Design Image component */}
             </Col>
@@ -171,7 +169,6 @@ const Product = () => {
         <Col
           style={{
             display: "flex",
-            flexDirection: "column",
             alignItems: "center",
           }}
         >
@@ -326,7 +323,7 @@ const Product = () => {
 
             <Col style={{ display: "flex", gap: 8 }}>
               <Image src={drawerSix} alt="cube" />
-              <Image src={drawerSeven} alt="cube" />
+              <Image src={drawerSeven} alt="cube"  style={{height:'100%'}}/>
             </Col>
             <Col
               style={{ display: "flex", justifyContent: "center", gap: "1rem" }}
@@ -432,7 +429,7 @@ const Product = () => {
           display: "flex",
           gap: "1rem",
           justifyContent: "center",
-          margin: "2rem",
+          padding: "2rem",
           backgroundColor:"#000000"
         }}
       >
