@@ -284,10 +284,10 @@ const Product = () => {
             User Interfaces (livewise){" "}
             <Image src={logo} alt="Image Four" preview={false} />{" "}
           </Text>
-          <Row
+          <Col
             style={{
               display: "flex",
-              flexWrap: "wrap",
+              // flexWrap: "wrap",
               justifyContent: "center",
               width: "100%",
             }}
@@ -295,7 +295,7 @@ const Product = () => {
             {carouselData.map((images, index) => (
               <Col
                 key={index}
-                style={{ width: "25%", height: "80vh", margin: 0 }}
+                style={{ width: "25%", margin: 0 }}
               >
                 <Carousel
                   effect="fade"
@@ -325,7 +325,14 @@ const Product = () => {
                 </Carousel>
               </Col>
             ))}
-          </Row>
+          </Col>
+
+
+
+
+
+
+
           <Col
             style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
           >

@@ -83,12 +83,12 @@ const MiscellaneousWork = () => {
     { key: 4, image: sk4 },
   ];
   const workArr = [
-    { key: 1, image: work1, height: "45vh", width: "32.5%" },
-    { key: 2, image: work2, height: "45vh", width: "32.5%" },
-    { key: 3, image: work3, height: "45vh", width: "32.5%" },
-    { key: 4, image: work4, height: "45vh", width: "32.5%" },
-    { key: 5, image: work5, height: "45vh", width: "42.5%" },
-    { key: 6, image: work6, height: "45vh", width: "22.5%" },
+    { key: 1, image: work1, height: "60vh", width: "32.5%" },
+    { key: 2, image: work2, height: "60vh", width: "32.5%" },
+    { key: 3, image: work3, height: "60vh", width: "32.5%" },
+    { key: 4, image: work4, height: "60vh", width: "32.5%" },
+    { key: 5, image: work5, height: "60vh", width: "42.5%" },
+    { key: 6, image: work6, height: "60vh", width: "22.5%" },
     { key: 7, image: work7, height: "110vh", width: "98.5%" },
   ];
 
