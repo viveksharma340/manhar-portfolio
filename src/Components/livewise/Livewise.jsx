@@ -28,7 +28,7 @@ const Livewise = () => {
 
   return (
     <Col style={{ backgroundColor: "#000000" }}>
-      <Col style={{ padding: "4rem 15%" }}>
+      <Col style={{ padding: "4rem 7%" }}>
         <Col style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
           <Text style={{ color: "#FFFFFF", fontWeight: 500, fontSize: "42px" }}>
             Livewise{" "}

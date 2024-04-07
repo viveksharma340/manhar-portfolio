@@ -1,4 +1,4 @@
-import { Button, Col, Typography } from "antd";
+import { Button, Col, Typography,Row,Image,Carousel } from "antd";
 import React from "react";
 import nftOne from "../../Assets/images/Nft 1.jpg";
 import nftTwo from "../../Assets/images/Nft 2.jpg";
@@ -39,7 +39,32 @@ import work3 from "../../Assets/images/work3.jpg";
 import work4 from "../../Assets/images/work4.jpg";
 import work5 from "../../Assets/images/work5.jpg";
 import work6 from "../../Assets/images/work6.jpg";
+
+
 import work7 from "../../Assets/images/work7.jpg";
+
+
+
+import nft1 from "../../Assets/images/nft1.png";
+import nft2 from "../../Assets/images/nft2.png";
+import nft3 from "../../Assets/images/nft3.png";
+import nft4 from "../../Assets/images/nft4.png";
+
+import nft5 from "../../Assets/images/nft5.png";
+
+import nft01 from "../../Assets/images/nft01.jpg";
+import nft02 from "../../Assets/images/nft02.png";
+import nft03 from "../../Assets/images/nft03.png";
+import nft04 from "../../Assets/images/nft04.png";
+import nft05 from "../../Assets/images/nft05.png";
+import nft06 from "../../Assets/images/nft06.png";
+
+
+
+
+
+
+
 
 import card1 from "../../Assets/images/card001.svg";
 import card2 from "../../Assets/images/card002.svg";
@@ -58,13 +83,13 @@ const MiscellaneousWork = () => {
     { key: 4, image: sk4 },
   ];
   const workArr = [
-    { key: 1, image: work1, height: "40vh", width: "32%" },
-    { key: 2, image: work2, height: "40vh", width: "32%" },
-    { key: 3, image: work3, height: "40vh", width: "32%" },
-    { key: 4, image: work4, height: "40vh", width: "32%" },
-    { key: 5, image: work5, height: "40vh", width: "42%" },
-    { key: 6, image: work6, height: "40vh", width: "22%" },
-    { key: 7, image: work7, height: "60vh", width: "97.5%" },
+    { key: 1, image: work1, height: "45vh", width: "32.5%" },
+    { key: 2, image: work2, height: "45vh", width: "32.5%" },
+    { key: 3, image: work3, height: "45vh", width: "32.5%" },
+    { key: 4, image: work4, height: "45vh", width: "32.5%" },
+    { key: 5, image: work5, height: "45vh", width: "42.5%" },
+    { key: 6, image: work6, height: "45vh", width: "22.5%" },
+    { key: 7, image: work7, height: "110vh", width: "98.5%" },
   ];
 
   const scrollToTop = () => {
@@ -75,15 +100,15 @@ const MiscellaneousWork = () => {
   };
 
   const shoot = [
-    { key: 1, image: shoot1, height: "75vh", width: "40%" },
+    { key: 1, image: shoot1, height: "100vh", width: "40%" },
     {
       key: 2,
       image: gif,
-      height: "50vh",
+      height: "60vh",
       Text: "Behind the scenes",
       width: "20%",
     },
-    { key: 3, image: shoot2, height: "75vh", width: "40%" },
+    { key: 3, image: shoot2, height: "100vh", width: "40%" },
   ];
 
   const cards = [
@@ -95,6 +120,15 @@ const MiscellaneousWork = () => {
   const handleImageClick = (url) => {
     navigate(url);
   };
+
+
+  const carouselData = [
+    [nft1,nft2,nft3,nft4,nft5],
+    [nft01,nft02,nft03,nft04,nft05,nft06 ],
+  ];
+
+
+
 
   const drArr = [
     { key: 1, image: dr1 },
@@ -108,7 +142,7 @@ const MiscellaneousWork = () => {
   ];
 
   const papper = [
-    { key: 1, image: ppr6 },
+    { key: 1, image: ppr6 ,height:'45vh'},
     { key: 2, image: ppr5 },
     { key: 3, image: ppr4 },
     { key: 4, image: ppr3 },
@@ -119,7 +153,7 @@ const MiscellaneousWork = () => {
     <Col style={{ backgroundColor: "#000000" }}>
       <Col
         style={{
-          padding: "4rem 15%",
+          padding: "4rem 7%",
           display: "flex",
           flexDirection: "column",
           gap: "2rem",
@@ -138,19 +172,42 @@ const MiscellaneousWork = () => {
         <Text style={{ color: "#FFFFFF", fontSize: "42px", fontWeight: 500 }}>
           NFT’s
         </Text>
-        <Col style={{ display: "flex", gap: "1rem" }}>
-          {cardOnee.map((cardObj) => (
-            <img
-              key={cardObj.key}
-              loading="lazy"
-              src={cardObj.image}
-              alt="cube"
-              style={{
-                color: "#FFFFF",
-                width: "50%",
-                height: "46vh",
-              }}
-            />
+        <Col
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            gap:"1rem"
+          }}
+        >
+          {carouselData.map((images, index) => (
+            <Col key={index} style={{ width: "49%", margin: 0, }}>
+              <Carousel
+                effect="fade"
+                style={{ height: "400px", width: "100% !important" }}
+                autoplay
+                slidesToShow={1}
+                autoplaySpeed={2500}
+                speed={300}
+                pauseOnHover={false}
+                infinite={true}
+                className="carouselParent"
+              >
+                {images.map((image, idx) => (
+                  <Image
+                    loading="lazy"
+                    style={{
+                      margin: 0,
+                      padding: 0,
+                    }}
+                    width={"100%"}
+                    key={idx}
+                    height="400px"
+                    src={image}
+                  />
+                ))}
+              </Carousel>
+            </Col>
           ))}
         </Col>
 
@@ -169,8 +226,8 @@ const MiscellaneousWork = () => {
                 alt="cube"
                 style={{
                   color: "#FFFFF",
-                  width: "24%",
-                  height: "25vh",
+                  width: "24.5%",
+                  height: "30vh",
                 }}
               />
             ))}
@@ -184,8 +241,8 @@ const MiscellaneousWork = () => {
                 alt="cube"
                 style={{
                   color: "#FFFFF",
-                  width: "24%",
-                  height: "25vh",
+                  width: "24.5%",
+                  height: "30vh",
                 }}
               />
             ))}
@@ -205,7 +262,7 @@ const MiscellaneousWork = () => {
               style={{
                 color: "#FFFFF",
                 width: "16.6%",
-                height: "30vh",
+                height: cardObj.height?cardObj.height: "32vh",
               }}
             />
           ))}
@@ -247,7 +304,7 @@ const MiscellaneousWork = () => {
         >
           <Col
             style={{
-              width: "55%",
+              width: "50%",
               display: "flex",
               flexDirection: "column",
               gap: "0.5rem",
@@ -263,24 +320,27 @@ const MiscellaneousWork = () => {
               //   width: "16.6%",
               //   height: "30vh",
               // }}
+              style={{
+                height: "60vh",
+
+              }}
             />
             <img
               loading="lazy"
               src={left2}
               alt="cube"
               style={{
-                height: "65vh",
+                height: "105vh",
               }}
             />
             <img
               loading="lazy"
               src={left3}
               alt="cube"
-              // style={{
-              //   color: "#FFFFF",
-              //   width: "16.6%",
-              //   height: "30vh",
-              // }}
+              style={{
+               
+                height: "50vh",
+              }}
             />
           </Col>
 
@@ -289,7 +349,7 @@ const MiscellaneousWork = () => {
               display: "flex",
               flexDirection: "column",
               gap: "0.5rem",
-              width: "45%",
+              width: "50%",
             }}
           >
             <Col style={{ display: "flex", gap: "0.5rem" }}>
@@ -299,8 +359,8 @@ const MiscellaneousWork = () => {
                 alt="cube"
                 style={{
                   //  color: "#FFFFF",
-                  width: "49%",
-                  height: "65vh",
+                  width: "49.5%",
+                  height: "75vh",
                 }}
               />
 
@@ -311,7 +371,7 @@ const MiscellaneousWork = () => {
                 style={{
                   //  color: "#FFFFF",
                   width: "49%",
-                  height: "65vh",
+                  height: "75vh",
                 }}
               />
             </Col>
@@ -329,6 +389,8 @@ const MiscellaneousWork = () => {
                 alt="cube"
                 style={{
                   width: "100%",
+                  height: "60vh",
+
                 }}
               />
 
@@ -338,6 +400,8 @@ const MiscellaneousWork = () => {
                 alt="cube"
                 style={{
                   width: "100%",
+                  height: "80vh",
+
                 }}
               />
             </Col>

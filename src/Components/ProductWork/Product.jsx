@@ -92,7 +92,7 @@ const Product = () => {
   };
   return (
     <Col style={{ backgroundColor: "#000000" }}>
-      <Col style={{ padding: "4rem 15%" }}>
+      <Col style={{ padding: "4rem 7%" }}>
         <Col style={{ display: "flex", flexDirection: "column", gap: "4rem" }}>
           <Text style={{ color: "#FFFFFF", fontWeight: 500, fontSize: "42px" }}>
             Website Redesign
@@ -183,7 +183,7 @@ const Product = () => {
 
           <Col style={{ display: "flex", gap: "30px" }}>
             <Col style={{}}>
-              <Image src={imgTwo} alt="Background Image" preview={false} />{" "}
+              <Image src={imgTwo} alt="Background Image" preview={true}  />{" "}
               {/* Use Ant Design Image component */}
             </Col>
             <Col
@@ -194,11 +194,11 @@ const Product = () => {
               }}
             >
               <Col style={{}}>
-                <Image src={imgThree} alt="Image Three" preview={false} />{" "}
+                <Image src={imgThree} alt="Image Three" preview={true} />{" "}
                 {/* Use Ant Design Image component */}
               </Col>
               <Col style={{}}>
-                <Image src={imgFour} alt="Image Four" preview={false} />{" "}
+                <Image src={imgFour} alt="Image Four" preview={true}  />{" "}
                 {/* Use Ant Design Image component */}
               </Col>
             </Col>
@@ -228,12 +228,12 @@ const Product = () => {
             }}
           >
             {card.map((cardObj) => (
-              <img
+              <Image
                 key={cardObj.key}
                 loading="lazy"
                 src={cardObj.image}
                 alt="cube"
-                style={{ color: "#FFFFF", width: "32%", cursor: "pointer" }}
+                // style={{ color: "#FFFFF", width: "32%", cursor: "pointer" }}
               />
             ))}
           </Col>

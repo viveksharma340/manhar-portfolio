@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 const { Text } = Typography;
 const About = () => {
   const navigate = useNavigate();
-  const images = [manhar1, manhar2, manhar3, manhar4];
+  const images = [ manhar2, manhar3, manhar4];
 
   const card = [
     { image: card1, url: "/product-work" },
