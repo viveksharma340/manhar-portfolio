@@ -238,7 +238,7 @@ const About = () => {
               Who am I?
             </Text>
             <Text
-              style={{ fontSize: "24px", fontWeight: 500, color: "#FFFFFF" }}
+              style={{ fontSize: "24px", fontWeight: 400, color: "#FFFFFF" }}
             >
               A design enthusiast in my early 20’s currently honing my craft at
               the National Institute of Fashion Technology, Jodhpur. From my

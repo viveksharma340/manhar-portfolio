@@ -142,6 +142,8 @@ useEffect(() => {
             justifyContent: "center",
             width: "20%",
             gap: "1rem",
+            marginTop:'16rem',
+            zIndex:2
           }}
         >
           <Col
@@ -153,7 +155,7 @@ useEffect(() => {
 
             }}
           >
-            <img loading="lazy" src={cubeIImage} alt="cube" className="shining-image" />
+            <img loading="lazy" src={cubeIImage} alt="cube"  className="shining-image" />
             <Text style={{ color: "#fff", backgroundColor: "transparent" }}>
               Designer
             </Text>
@@ -232,7 +234,8 @@ useEffect(() => {
           loading="lazy"
           src={backSwordImage}
           alt="Back Sword"
-          style={{ width: "30%" }}
+          style={{ width: "30%"  ,   marginTop:"16rem",
+          height:'80vh'}}
         />
         <img
           loading="lazy"
@@ -361,6 +364,8 @@ useEffect(() => {
         </Col>
         <Col
           style={{
+            paddingTop:'2rem',
+            paddingBottom:'2rem',
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
@@ -373,8 +378,9 @@ useEffect(() => {
             style={{
               color: "#ffff",
               textAlign: "center",
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: "62px",
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
             }}
           >
             YOU CAN{" "}
@@ -384,8 +390,10 @@ useEffect(() => {
             style={{
               color: "#ffff",
               textAlign: "center",
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: "62px",
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
+
             }}
           >
             {" "}
@@ -395,8 +403,10 @@ useEffect(() => {
             style={{
               color: "#ffff",
               textAlign: "center",
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: "62px",
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
+
             }}
           >
             {" "}
@@ -406,8 +416,10 @@ useEffect(() => {
             style={{
               color: "#ffff",
               textAlign: "center",
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: "62px",
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
+
             }}
           >
             {" "}

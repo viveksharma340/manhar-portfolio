@@ -216,8 +216,10 @@ const Livewise = () => {
               </Col>
 
               <Col style={{ display: "flex", flexDirection: "column" }}>
-                <Text style={{ color: "#9D9D9D" }}>— Visual design</Text>
-                <Text style={{ color: "#9D9D9D" }}>— UI/UX</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Visual design</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— UI/UX</Text>
               </Col>
             </Col>
           </Col>
@@ -440,8 +442,10 @@ const Livewise = () => {
               </Col>
 
               <Col style={{ display: "flex", flexDirection: "column" }}>
-                <Text style={{ color: "#9D9D9D" }}>— Visual design</Text>
-                <Text style={{ color: "#9D9D9D" }}>— Aesthetic</Text>
+                <Text style={{ color: "#9D9D9D"  , fontSize: "16px",
+                    fontWeight: 500,}}>— Visual design</Text>
+                <Text style={{ color: "#9D9D9D" , fontSize: "16px",
+                    fontWeight: 500,}}>— Aesthetic</Text>
               </Col>
             </Col>
           </Col>
@@ -459,6 +463,11 @@ const Livewise = () => {
                 fontWeight: 500,
                 height: "55px",
                 width: "217px",
+                display:"flex",
+                flexDirection:'column',
+                justifyContent:'center',
+                alignItems:'center',
+                padding:'1rem'
               }}
               onClick={() => window.open('https://www.nift.ac.in/jodhpur/careers', '_blank')}
 
@@ -470,7 +479,15 @@ const Livewise = () => {
                   textDecoration: "underLine",
                 }}
               >
-                Link to app
+                Link to site
+              </Text>
+              <Text
+                style={{
+                  // fontWeight: 500,
+                  fontSize: "12px",
+                }}
+              >
+                where this is being used
               </Text>
             </Button>
           </Col>
@@ -590,8 +607,10 @@ const Livewise = () => {
               </Col>
 
               <Col style={{ display: "flex", flexDirection: "column" }}>
-                <Text style={{ color: "#9D9D9D" }}>— Visual design</Text>
-                <Text style={{ color: "#9D9D9D" }}>— Advertisements</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Visual design</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Advertisements</Text>
               </Col>
             </Col>
           </Col>
@@ -706,8 +725,10 @@ const Livewise = () => {
               </Col>
 
               <Col style={{ display: "flex", flexDirection: "column" }}>
-                <Text style={{ color: "#9D9D9D" }}>— Print design</Text>
-                <Text style={{ color: "#9D9D9D" }}>— Cards</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Print design</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Cards</Text>
               </Col>
             </Col>
           </Col>
@@ -904,8 +925,10 @@ const Livewise = () => {
               </Col>
 
               <Col style={{ display: "flex", flexDirection: "column" }}>
-                <Text style={{ color: "#9D9D9D" }}>— Brand Promotion</Text>
-                <Text style={{ color: "#9D9D9D" }}>— Advertisements</Text>
+                <Text style={{ color: "#9D9D9D", fontSize: "16px",
+                    fontWeight: 500, }}>— Brand Promotion</Text>
+                <Text style={{ color: "#9D9D9D" , fontSize: "16px",
+                    fontWeight: 500,}}>— Advertisements</Text>
               </Col>
             </Col>
           </Col>
@@ -1118,7 +1141,7 @@ const Livewise = () => {
                   // textDecoration: "underLine",
                 }}
                 >
-Say Helo              </Text>
+Say Hello              </Text>
             </Button>
                 </Col>
     </Col>
