@@ -183,7 +183,7 @@ const Product = () => {
 
           <Col style={{ display: "flex", gap: "30px" }}>
             <Col style={{}}>
-              <Image src={imgTwo} alt="Background Image" preview={true}  />{" "}
+              <Image src={imgTwo} alt="Background Image" preview={true} />{" "}
               {/* Use Ant Design Image component */}
             </Col>
             <Col
@@ -198,7 +198,7 @@ const Product = () => {
                 {/* Use Ant Design Image component */}
               </Col>
               <Col style={{}}>
-                <Image src={imgFour} alt="Image Four" preview={true}  />{" "}
+                <Image src={imgFour} alt="Image Four" preview={true} />{" "}
                 {/* Use Ant Design Image component */}
               </Col>
             </Col>
@@ -293,10 +293,7 @@ const Product = () => {
             }}
           >
             {carouselData.map((images, index) => (
-              <Col
-                key={index}
-                style={{ width: "25%", margin: 0 }}
-              >
+              <Col key={index} style={{ width: "25%", margin: 0 }}>
                 <Carousel
                   effect="fade"
                   style={{ width: "100% !important" }}
@@ -326,12 +323,6 @@ const Product = () => {
               </Col>
             ))}
           </Col>
-
-
-
-
-
-
 
           <Col
             style={{ display: "flex", flexDirection: "column", gap: "2rem" }}
@@ -461,10 +452,12 @@ const Product = () => {
                   width: "70%",
                 }}
               >
-                Website redesign aims to refresh and optimize a site's look and
-                functionality, addressing outdated design elements or improving
-                user interface to align with current trends and user
-                expectations.
+                An occasional table is a diminutive yet adaptable furniture item
+                employed for various decorative or practical functions,
+                including supporting beverages, showcasing decor, or
+                supplementing surface area within a room. Its compact size and
+                portability allow for effortless repositioning as dictated by
+                the needs of the space.
               </Text>
             </Col>
             <Col

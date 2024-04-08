@@ -38,13 +38,19 @@ import photoFive from "../../Assets/images/Property 1=photo 6.jpg";
 import arrowTop from "../../Assets/icons/arrowTop.svg";
 import linkedIn from "../../Assets/icons/linkedIn.svg";
 import insta from "../../Assets/icons/insta.svg";
+
 import bE from "../../Assets/icons/BE.svg";
 
+import btn1 from "../../Assets/images/btn1.png";
+import btn2 from "../../Assets/images/btn2.png";
+
 import { Button } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const { Text } = Typography;
 
 const Home = () => {
+  const navigate=useNavigate()
   const carouselData = [
     [boxOne, boxTwo, boxThree],
     [magOne, magTwo, magThree, magFour, magFive],
@@ -73,6 +79,7 @@ const Home = () => {
       data: "Includes other parts of me where I explore myself such as Art direction, video editing and others.",
     },
   ];
+  const [isBtn1Hovered, setIsBtn1Hovered] = useState(false);
 
   const [hoveredCardId, setHoveredCardId] = useState(null);
 
@@ -122,6 +129,7 @@ const Home = () => {
               flexDirection: "column",
               alignItems: "center",
               backgroundColor: "transparent",
+
             }}
           >
             <img loading="lazy" src={cubeIImage} alt="cube" />
@@ -129,17 +137,30 @@ const Home = () => {
               Designer
             </Text>
           </Col>
+          <Col style={{display:'flex',flexDirection:'column'}}>
           <Text
             style={{
               color: "#fff",
               fontWeight: 500,
-              fontSize: "42px",
+              fontSize: "52px",
               backgroundColor: "transparent",
               textAlign: "center ",
             }}
-          >
-            Manhar Bhola
+            >
+            Manhar
           </Text>
+          <Text
+            style={{
+              color: "#fff",
+              fontWeight: 500,
+              fontSize: "52px",
+              backgroundColor: "transparent",
+              textAlign: "center ",
+            }}
+            >
+            Bhola
+          </Text>
+          </Col>
           <Text
             style={{
               color: "#fff",
@@ -150,16 +171,19 @@ const Home = () => {
             Design enthusiast with a knack for blending tech and art into
             captivating visuals.
           </Text>
-          <Button
-            style={{
-              height: "46px",
-              width: "92px",
-              fontWeight: 600,
-              fontSize: "16px",
-            }}
-          >
-            About
-          </Button>
+          <img
+  loading="lazy"
+  src={isBtn1Hovered ? btn2 : btn1}
+  alt="button"
+  style={{
+    height: '78px',
+    width: '212px',
+    cursor: 'pointer',
+  }}
+  onClick={()=>navigate('/about')}
+  onMouseEnter={() => setIsBtn1Hovered(true)}
+  onMouseLeave={() => setIsBtn1Hovered(false)}
+/>
         </Col>
       </Col>
 

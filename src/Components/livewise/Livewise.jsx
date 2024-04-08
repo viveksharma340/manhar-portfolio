@@ -48,9 +48,7 @@ import cc1 from "../../Assets/images/cc1.jpg";
 import cc2 from "../../Assets/images/cc2.jpg";
 import cc3 from "../../Assets/images/cc3.jpg";
 
-
 import cc4 from "../../Assets/images/cc4.jpg";
-
 
 import bluestack from "../../Assets/images/Bluestacks Banner.png";
 
@@ -58,8 +56,9 @@ import boat1 from "../../Assets/images/boat1.png";
 import boat2 from "../../Assets/images/boat2.png";
 import boat3 from "../../Assets/images/boat3.png";
 
-
 import boat4 from "../../Assets/images/boat4.png";
+
+import baln from "../../Assets/images/Portfolio Illustration mockup 4 1.png";
 
 import boat5 from "../../Assets/images/Bluestacks01 1.png";
 import boat6 from "../../Assets/images/Bluestacks02 1.png";
@@ -79,11 +78,11 @@ const Livewise = () => {
     });
   };
   const workArr = [
-    { key: 1, image: down1, height: "80vh", width: "59%" },
-    { key: 2, image: down2, height: "80vh", width: "39%" },
-    { key: 3, image: down3, height: "45vh", width: "32.2%" },
-    { key: 4, image: down4, height: "45vh", width: "32.4%" },
-    { key: 5, image: down5, height: "45vh", width: "32.1%" },
+    { key: 1, image: down1, height: "70vh", width: "59%" },
+    { key: 2, image: down2, height: "70vh", width: "39%" },
+    { key: 3, image: down3, height: "45vh", width: "34.2%" },
+    { key: 4, image: down4, height: "45vh", width: "29.4%" },
+    { key: 5, image: down5, height: "45vh", width: "33.1%" },
   ];
   const cckArr = [
     { key: 1, image: cc2, height: "40vh", width: "99.5%" },
@@ -96,23 +95,19 @@ const Livewise = () => {
     { key: 2, image: print2, height: "90vh", width: "59%" },
     { key: 3, image: print3, height: "90vh", width: "59%" },
     { key: 4, image: print4, height: "100vh", width: "39%", margin: "-4.5rem" },
-    { key: 5, image: print5, height: "55vh", width: "49%" },
-    { key: 6, image: print6, height: "55vh", width: "49%" },
+    { key: 5, image: print5, height: "65vh", width: "54%" },
+    { key: 6, image: print6, height: "65vh", width: "44%" },
   ];
 
-
-
-
   const cards = [
-    { key: 1, image: card1, url: "/product-work" },
-    { key: 2, image: "", url: "/home" },
-    { key: 3, image: card3, url: "/miscellaneous-work" },
+    { key: 1, image: card1, url: "/product-work", width: "25%" },
+    { key: 2, image: baln, url: "", width: "40%" },
+    { key: 3, image: card3, url: "/miscellaneous-work", width: "25%" },
   ];
 
   const handleImageClick = (url) => {
     navigate(url);
   };
-
 
   const carouselData = [
     [
@@ -147,7 +142,6 @@ const Livewise = () => {
       { key: 1, image: boat3 },
       { key: 2, image: boat4 },
     ],
-  
   ];
 
   const carouselDataI = [
@@ -263,7 +257,7 @@ const Livewise = () => {
                 style={{
                   color: "#FFFFF",
                   width: "100%",
-                  height: "80vh",
+                  height: "90vh",
                 }}
               />
             </Col>
@@ -285,7 +279,7 @@ const Livewise = () => {
                   style={{
                     color: "#FFFFF",
                     width: "100%",
-                    height: "50vh",
+                    height: "55vh",
                   }}
                 />
 
@@ -297,7 +291,7 @@ const Livewise = () => {
                   style={{
                     color: "#FFFFF",
                     width: "100%",
-                    height: "50vh",
+                    height: "55vh",
                   }}
                 />
               </Col>
@@ -310,7 +304,7 @@ const Livewise = () => {
                   style={{
                     color: "#FFFFF",
                     width: "100%",
-                    height: "102.5vh",
+                    height: "112.5vh",
                   }}
                 />
               </Col>
@@ -330,7 +324,7 @@ const Livewise = () => {
                   style={{
                     color: "#FFFFF",
                     width: "100%",
-                    height: "50vh",
+                    height: "55vh",
                   }}
                 />
 
@@ -363,7 +357,7 @@ const Livewise = () => {
                               style={{
                                 margin: 0,
                                 padding: 0,
-                                height: "50vh",
+                                height: "55vh",
                               }}
                               width={"100%"}
                               key={idx}
@@ -514,7 +508,7 @@ const Livewise = () => {
                         style={{
                           margin: 0,
                           padding: 0,
-                          height: "80vh",
+                          height: "70vh",
                         }}
                         width={"100%"}
                         key={image.key}
@@ -861,12 +855,8 @@ const Livewise = () => {
                 engagement, creating a visual symphony for the digital era."
               </Text>
             </Col>
-
-
-            — Instagram Posts — Carousals — Short Banner
-
-            — Brand Promotion — Advertisements
-
+            — Instagram Posts — Carousals — Short Banner — Brand Promotion —
+            Advertisements
             <Col
               style={{
                 width: "40%",
@@ -939,151 +929,165 @@ const Livewise = () => {
               </Text>
             </Button>
           </Col>
-          <img
-                loading="lazy"
-                src={bluestack}
-                alt="cube"
-             
-              />
-              <Col style={{display:'flex',gap:"1rem",width:'100%'}}>
-
-<Col
-            style={{
-              display: "flex",
-              //   flexWrap: "wrap",
-              justifyContent: "center",
-              width: "49%",
-              gap: "1rem",
-            }}
+          <img loading="lazy" src={bluestack} alt="cube" />
+          <Col style={{ display: "flex", gap: "1rem", width: "100%" }}>
+            <Col
+              style={{
+                display: "flex",
+                //   flexWrap: "wrap",
+                justifyContent: "center",
+                width: "54%",
+                gap: "1rem",
+              }}
             >
-            {carouselDataIII.map((images, index) => (
-              <Col key={index} style={{ width: "49.3%", margin: 0 }}>
-                <Carousel
-                  effect="fade"
-                  // style={{ width: "100% !important" }}
-                  autoplay
-                  slidesToShow={1}
-                  autoplaySpeed={2500}
-                  speed={200}
-                  pauseOnHover={false}
-                  infinite={true}
-                  className="carouselParent"
+              {carouselDataIII.map((images, index) => (
+                <Col
+                  key={index}
+                  style={{ width: index === 0 ? "59%" : "39%", margin: 0 }}
+                >
+                  <Carousel
+                    effect="fade"
+                    // style={{ width: "100% !important" }}
+                    autoplay
+                    slidesToShow={1}
+                    autoplaySpeed={2500}
+                    speed={200}
+                    pauseOnHover={false}
+                    infinite={true}
+                    className="carouselParent"
                   >
-                  {images.map((image, idx) => (
-                    <div key={image.key}>
-                      <img
-                        loading="lazy"
-                        style={{
-                          margin: 0,
-                          padding: 0,
-                          height: "80vh",
-                        }}
-                        width={"100%"}
-                        key={image.key}
-                        src={image.image}
+                    {images.map((image, idx) => (
+                      <div key={image.key}>
+                        <img
+                          loading="lazy"
+                          style={{
+                            margin: 0,
+                            padding: 0,
+                            height: "73vh",
+                          }}
+                          width={"100%"}
+                          key={image.key}
+                          src={image.image}
                         />
-                    </div>
-                  ))}
-                </Carousel>
-              </Col>
-            ))}
-          </Col>
-<Col style={{display:'flex',gap:"2px",width:'49.5%'}}>
-<img
-                        loading="lazy"
-                        style={{
-                          margin: 0,
-                          padding: 0,
-                          height: "80vh",
-                        }}
-                        width={"50%"}
-                        src={boat5}
-                        /><img
-                        loading="lazy"
-                        style={{
-                          margin: 0,
-                          padding: 0,
-                          height: "80vh",
-                        }}
-                        width={"50%"}
-                        src={boat6}
-                        />
-
-
-
-</Col>
-
+                      </div>
+                    ))}
+                  </Carousel>
+                </Col>
+              ))}
             </Col>
-<Text
+            <Col style={{ display: "flex", gap: "2px", width: "44.5%" }}>
+              <img
+                loading="lazy"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  height: "73vh",
+                }}
+                width={"50%"}
+                src={boat5}
+              />
+              <img
+                loading="lazy"
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  height: "73vh",
+                }}
+                width={"50%"}
+                src={boat6}
+              />
+            </Col>
+          </Col>
+          <Text
             style={{
               color: "#FFFFFF",
               fontWeight: 500,
               fontSize: "32px",
               marginTop: "3rem",
-              textAlign:'center'
+              textAlign: "center",
             }}
           >
             View more of my work;)
           </Text>
+          <Col
+            style={{
+              // width: "40%",
+             position:'absolute',
+             right: '4rem',
+             zIndex: 100,
+             bottom: '-10rem'
 
-
-
-
+            }}
+          >
+            <img
+              loading="lazy"
+              src={arrowTop}
+              alt="card"
+              onClick={scrollToTop}
+              style={{ cursor: "pointer" }}
+            />
+          </Col>
         </Col>
       </Col>
-          <Col
+      <Col
         style={{
           display: "flex",
-          gap: "1rem",
+          gap: "2rem",
           justifyContent: "center",
           padding: "2rem",
           backgroundColor: "#000000",
         }}
       >
-        {cards.map((cardObj, idx) =>
-          cardObj.image ? (
+        {cards.map(
+          (cardObj, idx) => (
+            // cardObj.image ? (
             <img
               key={cardObj.key}
               loading="lazy"
               src={cardObj.image}
               alt="cube"
-              style={{ color: "#FFFFF", width: "30%", cursor: "pointer" }}
+              style={{
+                color: "#FFFFF",
+                width: cardObj.width,
+                cursor: "pointer",
+              }}
               onClick={() => handleImageClick(cardObj.url)}
             />
-          ) : (
-            <Col
-              style={{
-                width: "30%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: "column",
-                gap: "2rem",
-              }}
-            >
-              <img
-                loading="lazy"
-                src={arrowTop}
-                alt="card"
-                onClick={scrollToTop}
-                style={{ cursor: "pointer" }}
-              />
-              <Button
-                onClick={() => navigate("/")}
-                type="primary"
-                style={{
-                  backgroundColor: "#000000",
-                  border: "1px solid #FFFFFF",
-                  height: "42px",
-                }}
-              >
-                <Text style={{ color: "#FFFFFF", fontWeight: 500 }}>
-                  {" "}
-                  Go back to home page
-                </Text>
-              </Button>{" "}
-            </Col>
           )
+          // ) : (
+          // <Col
+          //   style={{
+          //     width: "30%",
+          //     display: "flex",
+          //     justifyContent: "center",
+          //     alignItems: "center",
+          //     flexDirection: "column",
+          //     gap: "2rem",
+          //   }}
+          // >
+          //   <img
+          //     loading="lazy"
+          //     src={arrowTop}
+          //     alt="card"
+          //     onClick={scrollToTop}
+          //     style={{ cursor: "pointer" }}
+          //   />
+          //   <Button
+          //     onClick={() => navigate("/")}
+          //     type="primary"
+          //     style={{
+          //       backgroundColor: "#000000",
+          //       border: "1px solid #FFFFFF",
+          //       height: "42px",
+          //     }}
+          //   >
+          //     <Text style={{ color: "#FFFFFF", fontWeight: 500 }}>
+          //       {" "}
+          //       Go back to home page
+          //     </Text>
+          //   </Button>{" "}
+          // </Col>
+          // )
         )}
       </Col>
     </Col>
