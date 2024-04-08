@@ -1,5 +1,5 @@
 import { Col, Typography, Image, Carousel, Row, Button } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import imgOne from "../../Assets/images/Cmsbig 1.jpg";
 import imgTwo from "../../Assets/images/oldcms02 1.jpg";
 import imgThree from "../../Assets/images/Screenshot 2024-01-14 190810 1.jpg";
@@ -87,6 +87,10 @@ const Product = () => {
       behavior: "smooth",
     });
   };
+  useEffect(()=>{
+    scrollToTop()
+
+  },[])
   const handleImageClick = (url) => {
     navigate(url);
   };

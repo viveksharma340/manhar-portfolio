@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link style={{color:"#fff"}} to="/about">About</Link>
           </Col>
           <Col key="work">
-            <Link style={{color:"#fff"}} to="/work">Work</Link>
+          <Link style={{color:"#fff"}} to="/?scrollTo=latestWork">Work</Link>
           </Col>
         </Col>
       </Menu>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel, Col, Image, Input, Row, Typography } from "antd";
 import "./Home.css";
 import cubeIImage from "../../Assets/icons/Cube02.svg";
@@ -45,12 +45,34 @@ import btn1 from "../../Assets/images/btn1.png";
 import btn2 from "../../Assets/images/btn2.png";
 
 import { Button } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,useLocation} from "react-router-dom";
 
 const { Text } = Typography;
 
 const Home = () => {
   const navigate=useNavigate()
+
+
+  const location = useLocation();
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+useEffect(() => {
+  const queryParams = new URLSearchParams(location.search);
+  const scrollTo = queryParams.get('scrollTo');
+  if (scrollTo === 'latestWork') {
+    const section = document.querySelector('.latest-work-section'); 
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }else{
+    scrollToTop()
+
+  }
+}, [location]);
   const carouselData = [
     [boxOne, boxTwo, boxThree],
     [magOne, magTwo, magThree, magFour, magFive],
@@ -65,18 +87,22 @@ const Home = () => {
       icon: skillImage,
       header: "Graphic design button",
       data: "Includes all the graphic related stuff done by me in the recent years like logo, cards, magazines and more.",
+      navigation:'/graphic-work'
     },
     {
       id: 2,
       icon: skillIImage,
       header: "Product, UI/UX Design",
       data: "Includes work related to physical product design and user interface and experience design.",
+      navigation:'/product-work'
     },
     {
       id: 3,
       icon: skill2Image,
       header: "Other stuff I do!",
       data: "Includes other parts of me where I explore myself such as Art direction, video editing and others.",
+      navigation:'/miscellaneous-work'
+
     },
   ];
   const [isBtn1Hovered, setIsBtn1Hovered] = useState(false);
@@ -94,12 +120,7 @@ const Home = () => {
       return "#009379";
     }
   }
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+ 
   return (
     <Col
       style={{
@@ -132,7 +153,7 @@ const Home = () => {
 
             }}
           >
-            <img loading="lazy" src={cubeIImage} alt="cube" />
+            <img loading="lazy" src={cubeIImage} alt="cube" className="shining-image" />
             <Text style={{ color: "#fff", backgroundColor: "transparent" }}>
               Designer
             </Text>
@@ -226,9 +247,11 @@ const Home = () => {
       <Col style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
         {cardData.map((data) => (
           <Col
+          onClick={()=>navigate(data.navigation)}
             key={data.id}
             className="card-container"
             style={{
+              cursor:"pointer",
               backgroundColor:
                 hoveredCardId === data.id ? getSVGColor(data.id) : "#fff",
             }}
@@ -275,6 +298,7 @@ const Home = () => {
         }}
       >
         <Text
+        className="latest-work-section"
           style={{
             color: "#FFFF",
             fontWeight: 500,
@@ -440,10 +464,28 @@ const Home = () => {
             }
           </Text>
           <Col style={{ display: "flex", gap: "1rem", paddingTop: "1rem" }}>
-            <img loading="lazy" src={linkedIn} alt="card" />
-            <img loading="lazy" src={insta} alt="card" />
+          <img
+  loading="lazy"
+  src={linkedIn}
+  alt="card"
+  style={{ cursor: 'pointer' }} 
+  onClick={() => window.open('https://www.linkedin.com/in/manhar-bhola-b72b62220/', '_blank')}
+/>
+          <img
+  loading="lazy"
+  src={insta}
+  alt="card"
+  style={{ cursor: 'pointer' }} 
+  onClick={() => window.open('https://www.instagram.com/manhar.bhola', '_blank')}
+/>
+          <img
+  loading="lazy"
+  src={bE}
+  alt="card"
+  style={{ cursor: 'pointer' }} 
+  onClick={() => window.open('https://www.behance.net/manharbhola', '_blank')}
+/>
 
-            <img loading="lazy" src={bE} alt="card" />
           </Col>
         </Col>
 

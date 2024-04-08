@@ -1,5 +1,5 @@
 import { Button, Carousel, Col, Image, Row, Typography } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import liv1 from "../../Assets/images/liv1.png";
 
 import liv2 from "../../Assets/images/liv2.png";
@@ -77,6 +77,10 @@ const Livewise = () => {
       behavior: "smooth",
     });
   };
+  useEffect(()=>{
+    scrollToTop()
+
+  },[])
   const workArr = [
     { key: 1, image: down1, height: "70vh", width: "59%" },
     { key: 2, image: down2, height: "70vh", width: "39%" },
@@ -232,6 +236,8 @@ const Livewise = () => {
                 height: "55px",
                 width: "217px",
               }}
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=in.livewise&hl=en-IN', '_blank')}
+
             >
               <Text
                 style={{
@@ -454,6 +460,8 @@ const Livewise = () => {
                 height: "55px",
                 width: "217px",
               }}
+              onClick={() => window.open('https://www.nift.ac.in/jodhpur/careers', '_blank')}
+
             >
               <Text
                 style={{
@@ -1090,6 +1098,29 @@ const Livewise = () => {
           // )
         )}
       </Col>
+      <Col style={{display:"flex",justifyContent:'flex-end',padding:'3rem'}}>
+      <Button
+              style={{
+                fontWeight: 500,
+                height: "55px",
+                backgroundColor: "#000000",
+                // width: "217px",
+              }}
+              onClick={() => window.open('https://www.instagram.com/manhar.bhola', '_blank')}
+
+            >
+              <Text
+                style={{
+                  color: "#FFFFFF",
+                  
+                  fontWeight: 500,
+                  fontSize: "24px",
+                  // textDecoration: "underLine",
+                }}
+                >
+Say Helo              </Text>
+            </Button>
+                </Col>
     </Col>
   );
 };

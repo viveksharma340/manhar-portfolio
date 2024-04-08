@@ -1,7 +1,6 @@
 import { Button, Carousel, Col, Image, Typography } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import cube5Image from "../../Assets/icons/Cube08.svg";
-import manhar1 from "../../Assets/images/manhar1.jpg";
 import manhar2 from "../../Assets/images/manhar2.jpg";
 import manhar3 from "../../Assets/images/manhar3.jpg";
 import manhar4 from "../../Assets/images/manhar4.jpg";
@@ -29,6 +28,10 @@ const About = () => {
       behavior: "smooth",
     });
   };
+  useEffect(()=>{
+    scrollToTop()
+
+  },[])
   const handleImageClick = (url) => {
     navigate(url);
   };
@@ -114,10 +117,12 @@ const About = () => {
               </Col>
               <Col style={{ display: "flex", flexDirection: "column" }}>
                 <Text
+                onClick={() => window.open('https://www.linkedin.com/in/manhar-bhola-b72b62220/', '_blank')}
                   style={{
                     fontWeight: 500,
                     fontSize: "24px",
                     color: "#FFFFFF",
+                    cursor:'pointer',
                     textDecoration: "underline",
                   }}
                 >
@@ -128,8 +133,12 @@ const About = () => {
                     fontWeight: 500,
                     fontSize: "24px",
                     color: "#FFFFFF",
+                    cursor:'pointer',
+
                     textDecoration: "underline",
                   }}
+                  onClick={() => window.open('https://www.behance.net/manharbhola', '_blank')}
+
                 >
                   Behance
                 </Text>
@@ -139,7 +148,11 @@ const About = () => {
                     fontSize: "24px",
                     color: "#FFFFFF",
                     textDecoration: "underline",
+                    cursor:'pointer',
+
                   }}
+                  onClick={() => window.open('https://www.instagram.com/manhar.bhola', '_blank')}
+
                 >
                   Instagram
                 </Text>
@@ -149,7 +162,11 @@ const About = () => {
                     fontSize: "24px",
                     color: "#FFFFFF",
                     textDecoration: "underline",
+                    cursor:'pointer',
+
                   }}
+                  onClick={() => window.open('https://www.youtube.com/channel/UCA82P27yAJL1SpumQiSj3KQ', '_blank')}
+
                 >
                   Youtube
                 </Text>

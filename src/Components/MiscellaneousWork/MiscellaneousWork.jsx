@@ -1,5 +1,5 @@
 import { Button, Col, Typography,Row,Image,Carousel } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import nftOne from "../../Assets/images/Nft 1.jpg";
 import nftTwo from "../../Assets/images/Nft 2.jpg";
 
@@ -68,7 +68,6 @@ import nft06 from "../../Assets/images/nft06.png";
 
 import card1 from "../../Assets/images/card001.svg";
 import card2 from "../../Assets/images/card002.svg";
-import card3 from "../../Assets/images/card003.svg";
 
 import gif from "../../Assets/images/gif2.gif";
 import { useNavigate } from "react-router-dom";
@@ -98,7 +97,10 @@ const MiscellaneousWork = () => {
       behavior: "smooth",
     });
   };
+  useEffect(()=>{
+    scrollToTop()
 
+  },[])
   const shoot = [
     { key: 1, image: shoot1, height: "100vh", width: "40%" },
     {
