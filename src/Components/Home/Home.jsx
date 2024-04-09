@@ -45,13 +45,12 @@ import btn1 from "../../Assets/images/btn1.png";
 import btn2 from "../../Assets/images/btn2.png";
 
 import { Button } from "antd";
-import { useNavigate ,useLocation} from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const { Text } = Typography;
 
 const Home = () => {
-  const navigate=useNavigate()
-
+  const navigate = useNavigate();
 
   const location = useLocation();
   const scrollToTop = () => {
@@ -60,19 +59,18 @@ const Home = () => {
       behavior: "smooth",
     });
   };
-useEffect(() => {
-  const queryParams = new URLSearchParams(location.search);
-  const scrollTo = queryParams.get('scrollTo');
-  if (scrollTo === 'latestWork') {
-    const section = document.querySelector('.latest-work-section'); 
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const scrollTo = queryParams.get("scrollTo");
+    if (scrollTo === "latestWork") {
+      const section = document.querySelector(".latest-work-section");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    } else {
+      scrollToTop();
     }
-  }else{
-    scrollToTop()
-
-  }
-}, [location]);
+  }, [location]);
   const carouselData = [
     [boxOne, boxTwo, boxThree],
     [magOne, magTwo, magThree, magFour, magFive],
@@ -87,22 +85,21 @@ useEffect(() => {
       icon: skillImage,
       header: "Graphic design button",
       data: "Includes all the graphic related stuff done by me in the recent years like logo, cards, magazines and more.",
-      navigation:'/graphic-work'
+      navigation: "/graphic-work",
     },
     {
       id: 2,
       icon: skillIImage,
       header: "Product, UI/UX Design",
       data: "Includes work related to physical product design and user interface and experience design.",
-      navigation:'/product-work'
+      navigation: "/product-work",
     },
     {
       id: 3,
       icon: skill2Image,
       header: "Other stuff I do!",
       data: "Includes other parts of me where I explore myself such as Art direction, video editing and others.",
-      navigation:'/miscellaneous-work'
-
+      navigation: "/miscellaneous-work",
     },
   ];
   const [isBtn1Hovered, setIsBtn1Hovered] = useState(false);
@@ -120,7 +117,7 @@ useEffect(() => {
       return "#009379";
     }
   }
- 
+
   return (
     <Col
       style={{
@@ -142,8 +139,8 @@ useEffect(() => {
             justifyContent: "center",
             width: "20%",
             gap: "1rem",
-            marginTop:'16rem',
-            zIndex:2
+            marginTop: "16rem",
+            zIndex: 2,
           }}
         >
           <Col
@@ -152,37 +149,41 @@ useEffect(() => {
               flexDirection: "column",
               alignItems: "center",
               backgroundColor: "transparent",
-
             }}
           >
-            <img loading="lazy" src={cubeIImage} alt="cube"  className="shining-image" />
+            <img
+              loading="lazy"
+              src={cubeIImage}
+              alt="cube"
+              className="shining-image"
+            />
             <Text style={{ color: "#fff", backgroundColor: "transparent" }}>
               Designer
             </Text>
           </Col>
-          <Col style={{display:'flex',flexDirection:'column'}}>
-          <Text
-            style={{
-              color: "#fff",
-              fontWeight: 500,
-              fontSize: "52px",
-              backgroundColor: "transparent",
-              textAlign: "center ",
-            }}
+          <Col style={{ display: "flex", flexDirection: "column" }}>
+            <Text
+              style={{
+                color: "#fff",
+                fontWeight: 500,
+                fontSize: "52px",
+                backgroundColor: "transparent",
+                textAlign: "center ",
+              }}
             >
-            Manhar
-          </Text>
-          <Text
-            style={{
-              color: "#fff",
-              fontWeight: 500,
-              fontSize: "52px",
-              backgroundColor: "transparent",
-              textAlign: "center ",
-            }}
+              Manhar
+            </Text>
+            <Text
+              style={{
+                color: "#fff",
+                fontWeight: 500,
+                fontSize: "52px",
+                backgroundColor: "transparent",
+                textAlign: "center ",
+              }}
             >
-            Bhola
-          </Text>
+              Bhola
+            </Text>
           </Col>
           <Text
             style={{
@@ -195,18 +196,18 @@ useEffect(() => {
             captivating visuals.
           </Text>
           <img
-  loading="lazy"
-  src={isBtn1Hovered ? btn2 : btn1}
-  alt="button"
-  style={{
-    height: '78px',
-    width: '212px',
-    cursor: 'pointer',
-  }}
-  onClick={()=>navigate('/about')}
-  onMouseEnter={() => setIsBtn1Hovered(true)}
-  onMouseLeave={() => setIsBtn1Hovered(false)}
-/>
+            loading="lazy"
+            src={isBtn1Hovered ? btn2 : btn1}
+            alt="button"
+            style={{
+              height: "78px",
+              width: "212px",
+              cursor: "pointer",
+            }}
+            onClick={() => navigate("/about")}
+            onMouseEnter={() => setIsBtn1Hovered(true)}
+            onMouseLeave={() => setIsBtn1Hovered(false)}
+          />
         </Col>
       </Col>
 
@@ -234,8 +235,7 @@ useEffect(() => {
           loading="lazy"
           src={backSwordImage}
           alt="Back Sword"
-          style={{ width: "30%"  ,   marginTop:"16rem",
-          height:'80vh'}}
+          style={{ width: "30%", marginTop: "16rem", height: "80vh" }}
         />
         <img
           loading="lazy"
@@ -247,14 +247,17 @@ useEffect(() => {
           }}
         />
       </Col>
-      <Col style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+      <Col
+        className="latest-work-section"
+        style={{ display: "flex", gap: "1rem", justifyContent: "center" }}
+      >
         {cardData.map((data) => (
           <Col
-          onClick={()=>navigate(data.navigation)}
+            onClick={() => navigate(data.navigation)}
             key={data.id}
             className="card-container"
             style={{
-              cursor:"pointer",
+              cursor: "pointer",
               backgroundColor:
                 hoveredCardId === data.id ? getSVGColor(data.id) : "#fff",
             }}
@@ -301,7 +304,6 @@ useEffect(() => {
         }}
       >
         <Text
-        className="latest-work-section"
           style={{
             color: "#FFFF",
             fontWeight: 500,
@@ -364,8 +366,8 @@ useEffect(() => {
         </Col>
         <Col
           style={{
-            paddingTop:'2rem',
-            paddingBottom:'2rem',
+            paddingTop: "2rem",
+            paddingBottom: "2rem",
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
@@ -380,7 +382,7 @@ useEffect(() => {
               textAlign: "center",
               fontWeight: 600,
               fontSize: "62px",
-              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff `,
             }}
           >
             YOU CAN{" "}
@@ -392,8 +394,7 @@ useEffect(() => {
               textAlign: "center",
               fontWeight: 600,
               fontSize: "62px",
-              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
-
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff `,
             }}
           >
             {" "}
@@ -405,8 +406,7 @@ useEffect(() => {
               textAlign: "center",
               fontWeight: 600,
               fontSize: "62px",
-              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
-
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff `,
             }}
           >
             {" "}
@@ -418,8 +418,7 @@ useEffect(() => {
               textAlign: "center",
               fontWeight: 600,
               fontSize: "62px",
-              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff ` 
-
+              textShadow: ` 0 0 1px #ffffff,0 0 4px #ffffff `,
             }}
           >
             {" "}
@@ -476,28 +475,36 @@ useEffect(() => {
             }
           </Text>
           <Col style={{ display: "flex", gap: "1rem", paddingTop: "1rem" }}>
-          <img
-  loading="lazy"
-  src={linkedIn}
-  alt="card"
-  style={{ cursor: 'pointer' }} 
-  onClick={() => window.open('https://www.linkedin.com/in/manhar-bhola-b72b62220/', '_blank')}
-/>
-          <img
-  loading="lazy"
-  src={insta}
-  alt="card"
-  style={{ cursor: 'pointer' }} 
-  onClick={() => window.open('https://www.instagram.com/manhar.bhola', '_blank')}
-/>
-          <img
-  loading="lazy"
-  src={bE}
-  alt="card"
-  style={{ cursor: 'pointer' }} 
-  onClick={() => window.open('https://www.behance.net/manharbhola', '_blank')}
-/>
-
+            <img
+              loading="lazy"
+              src={linkedIn}
+              alt="card"
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/manhar-bhola-b72b62220/",
+                  "_blank"
+                )
+              }
+            />
+            <img
+              loading="lazy"
+              src={insta}
+              alt="card"
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                window.open("https://www.instagram.com/manhar.bhola", "_blank")
+              }
+            />
+            <img
+              loading="lazy"
+              src={bE}
+              alt="card"
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                window.open("https://www.behance.net/manharbhola", "_blank")
+              }
+            />
           </Col>
         </Col>
 

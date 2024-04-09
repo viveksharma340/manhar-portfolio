@@ -74,6 +74,8 @@
   }
   
   .shining-image {
-    animation: shine 2s infinite; /* Adjust the duration (2s) as needed */
+    height: 80px;
+    width: 80px;
+    animation: shine 2s infinite;
   }
   

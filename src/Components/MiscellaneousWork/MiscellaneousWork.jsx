@@ -1,7 +1,6 @@
-import { Button, Col, Typography,Row,Image,Carousel } from "antd";
+import { Button, Col, Typography, Image, Carousel } from "antd";
 import React, { useEffect } from "react";
-import nftOne from "../../Assets/images/Nft 1.jpg";
-import nftTwo from "../../Assets/images/Nft 2.jpg";
+
 
 import sk1 from "../../Assets/images/image 35.jpg";
 import sk2 from "../../Assets/images/image 36.jpg";
@@ -10,7 +9,7 @@ import sk4 from "../../Assets/images/image 39.jpg";
 import dr1 from "../../Assets/images/image 40.jpg";
 import dr2 from "../../Assets/images/image 41.jpg";
 import dr3 from "../../Assets/images/image 42.jpg";
-import dr4 from "../../Assets/images/Nft 2.jpg";
+import dr4 from "../../Assets/images/sk.jpg";
 
 import ppr1 from "../../Assets/images/ppr1.jpg";
 import ppr2 from "../../Assets/images/ppr2.jpg";
@@ -40,10 +39,7 @@ import work4 from "../../Assets/images/work4.jpg";
 import work5 from "../../Assets/images/work5.jpg";
 import work6 from "../../Assets/images/work6.jpg";
 
-
 import work7 from "../../Assets/images/work7.jpg";
-
-
 
 import nft1 from "../../Assets/images/nft1.png";
 import nft2 from "../../Assets/images/nft2.png";
@@ -58,13 +54,6 @@ import nft03 from "../../Assets/images/nft03.png";
 import nft04 from "../../Assets/images/nft04.png";
 import nft05 from "../../Assets/images/nft05.png";
 import nft06 from "../../Assets/images/nft06.png";
-
-
-
-
-
-
-
 
 import card1 from "../../Assets/images/card001.svg";
 import card2 from "../../Assets/images/card002.svg";
@@ -97,10 +86,9 @@ const MiscellaneousWork = () => {
       behavior: "smooth",
     });
   };
-  useEffect(()=>{
-    scrollToTop()
-
-  },[])
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   const shoot = [
     { key: 1, image: shoot1, height: "100vh", width: "40%" },
     {
@@ -123,14 +111,10 @@ const MiscellaneousWork = () => {
     navigate(url);
   };
 
-
   const carouselData = [
-    [nft1,nft2,nft3,nft4,nft5],
-    [nft01,nft02,nft03,nft04,nft05,nft06 ],
+    [nft1, nft2, nft3, nft4, nft5],
+    [nft01, nft02, nft03, nft04, nft05, nft06],
   ];
-
-
-
 
   const drArr = [
     { key: 1, image: dr1 },
@@ -138,13 +122,9 @@ const MiscellaneousWork = () => {
     { key: 3, image: dr3 },
     { key: 4, image: dr4 },
   ];
-  const cardOnee = [
-    { key: 1, image: nftOne },
-    { key: 2, image: nftTwo },
-  ];
 
   const papper = [
-    { key: 1, image: ppr6 ,height:'45vh'},
+    { key: 1, image: ppr6, height: "45vh" },
     { key: 2, image: ppr5 },
     { key: 3, image: ppr4 },
     { key: 4, image: ppr3 },
@@ -179,11 +159,11 @@ const MiscellaneousWork = () => {
             display: "flex",
             justifyContent: "center",
             width: "100%",
-            gap:"1rem"
+            gap: "1rem",
           }}
         >
           {carouselData.map((images, index) => (
-            <Col key={index} style={{ width: "49%", margin: 0, }}>
+            <Col key={index} style={{ width: "49%", margin: 0 }}>
               <Carousel
                 effect="fade"
                 style={{ height: "400px", width: "100% !important" }}
@@ -264,7 +244,7 @@ const MiscellaneousWork = () => {
               style={{
                 color: "#FFFFF",
                 width: "16.6%",
-                height: cardObj.height?cardObj.height: "32vh",
+                height: cardObj.height ? cardObj.height : "32vh",
               }}
             />
           ))}
@@ -324,7 +304,6 @@ const MiscellaneousWork = () => {
               // }}
               style={{
                 height: "60vh",
-
               }}
             />
             <img
@@ -340,7 +319,6 @@ const MiscellaneousWork = () => {
               src={left3}
               alt="cube"
               style={{
-               
                 height: "50vh",
               }}
             />
@@ -392,7 +370,6 @@ const MiscellaneousWork = () => {
                 style={{
                   width: "100%",
                   height: "60vh",
-
                 }}
               />
 
@@ -403,7 +380,6 @@ const MiscellaneousWork = () => {
                 style={{
                   width: "100%",
                   height: "80vh",
-
                 }}
               />
             </Col>
