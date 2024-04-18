@@ -83,7 +83,7 @@ const Home = () => {
     {
       id: 1,
       icon: skillImage,
-      header: "Graphic design button",
+      header: "Graphic design",
       data: "Includes all the graphic related stuff done by me in the recent years like logo, cards, magazines and more.",
       navigation: "/graphic-work",
     },
